@@ -1,9 +1,12 @@
+# FROM continuumio/miniconda:4.5.4
 FROM jupyter/datascience-notebook
 
-RUN pip install mlflow>=1.0 \
-    && pip install azure-storage-blob==12.3.0 \
-    && pip install numpy==1.14.3 \
-    && pip install scipy \
-    && pip install pandas==0.22.0 \
-    && pip install scikit-learn==0.19.1 \
-    && pip install cloudpickle
+RUN conda install mlflow \
+    && conda install azure-storage-blob \
+    && conda install numpy \
+    && conda install scipy \
+    && conda install pandas \
+    && conda install scikit-learn \
+    && conda install cloudpickle
+
+EXPOSE 5050
