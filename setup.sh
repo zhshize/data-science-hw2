@@ -19,6 +19,6 @@ else
 fi
 
 echo "Start to build docker image..."
-docker build -t mlflow-docker-example -f Dockerfile .
+sudo docker build -t mlflow-docker-example -f Dockerfile .
 echo "Docker image 'mlflow-docker-example' is built, run container:"
-docker run -p 8888:8888 -p 5050:5050 -e JUPYTER_ENABLE_LAB=yes mlflow-docker-example
+sudo docker run -p 8888:8888 -p 5050:5050 -e JUPYTER_ENABLE_LAB=yes mlflow-docker-example
