@@ -14,7 +14,7 @@ if test -f "Dockerfile"; then
     echo "Dockerfile exists"
 else
     echo "Dockerfile doesn't exist, try to download from github..."
-    git clone git@github.com:zhshize/data-science-hw2.git
+    git clone https://github.com/zhshize/data-science-hw2.git
     cd data-science-hw2
 fi
 
